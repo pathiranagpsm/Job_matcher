@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Job Match Result</title>
+    <link rel="stylesheet" href="/static/styles.css">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            padding: 20px;
+        }
+        h1 {
+            color: #333;
+        }
+        .score {
+            font-size: 24px;
+            font-weight: bold;
+            margin-bottom: 20px;
+        }
+        .back-link {
+            display: inline-block;
+            padding: 10px 20px;
+            background-color: #333;
+            color: #fff;
+            text-decoration: none;
+            border-radius: 4px;
+            transition: background-color 0.3s ease;
+        }
+        .back-link:hover {
+            background-color: #555;
+        }
+    </style>
+</head>
+<body>
+    <h1>Job Match Result</h1>
+    <p class="score">Your match score is: <span>{{ score }}</span></p>
+    <a class="back-link" href="/">Go back</a>
+</body>
+</html>

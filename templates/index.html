@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Job Match Application</title>
+    <link rel="stylesheet" href="/static/styles.css">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            max-width: 500px;
+            margin: 0 auto;
+            padding: 20px;
+            text-align: center; /* Added */
+        }
+        h1 {
+            color: #333;
+        }
+        form {
+            background-color: #f5f5f5;
+            padding: 20px;
+            border-radius: 5px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            text-align: left; /* Added */
+        }
+        label {
+            font-weight: bold;
+            display: block;
+            margin-bottom: 5px;
+        }
+        textarea {
+            width: 100%;
+            padding: 10px;
+            font-size: 16px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            resize: vertical;
+        }
+        input[type="file"] {
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+        }
+        input[type="submit"] {
+            background-color: #333;
+            color: #fff;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+            margin-top: 10px; /* Added */
+        }
+        input[type="submit"]:hover {
+            background-color: #555;
+        }
+    </style>
+</head>
+<body>
+    <h1>Job Match Application</h1>
+    <form action="/submit/" enctype="multipart/form-data" method="post">
+        <label for="job_description">Job Description:</label>
+        <textarea id="job_description" name="job_description" rows="8" placeholder="Enter job description..."></textarea>
+        <label for="resume">Upload Resume:</label>
+        <input required type="file" id="resume" name="resume" accept=".pdf">
+        <br><br>
+        <input type="submit" value="Submit">
+    </form>
+</body>
+</html>
